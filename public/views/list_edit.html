@@ -1,0 +1,152 @@
+<div class="editor-wrap" ng-if="editScope">
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Название
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.name">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        ID
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.id">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        ID проекта
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.project_id">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Статус
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.obj_status">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Прогресс
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.physical_progress">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Создан
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.creation_date">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Начало
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.start_date">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Срок
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.due_date">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Статус
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.obj_status">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                      ID проекта
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" ng-model="editScope.project_id">
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div  class="row">
+     <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Описание
+                    </div>
+                    <div class="col-md-9">
+                        <textarea  ng-model="editScope.description">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+        <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        Закончен
+                    </div>
+                    <div class="col-md-9">
+                        <input type="checkbox" ng-model="editScope.is_completed" ng-true-value="true" ng-false-value="false">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        В архиве
+                    </div>
+                    <div class="col-md-9">
+                        <input type="checkbox" ng-model="editScope.is_archived" ng-true-value="true" ng-false-value="false" >
+                    </div>
+                </div>
+            </div>
+    </div>
+            </div>
+    </div>
+    <div class="text-center mt-10"><button ng-click="saveElem(editScope)">Save</button></div>
+    
+</div>

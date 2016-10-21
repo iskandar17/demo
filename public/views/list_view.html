@@ -1,0 +1,150 @@
+<div class="text-center"> <div class="editor-wrap editor-wrap-view" ng-if="editScope">
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Название
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.name}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        ID
+                    </div>
+                    <div class="col-md-9">
+                       {{editScope.id}}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        ID проекта
+                    </div>
+                    <div class="col-md-9">
+                       {{editScope.project_id}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Статус
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.obj_status}}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Прогресс
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.physical_progress}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Создан
+                    </div>
+                    <div class="col-md-9">
+                       {{editScope.creation_date}}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Начало
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.start_date}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Срок
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.due_date}}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Статус
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.obj_status}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                      ID проекта
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.project_id}}
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div  class="row">
+     <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Описание
+                    </div>
+                    <div class="col-md-9">
+                       {{editScope.description}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+        <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        Закончен
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.is_completed | myfilter}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        В архиве
+                    </div>
+                    <div class="col-md-9">
+                        {{editScope.is_archived | myfilter}}
+                    </div>
+                </div>
+            </div>
+    </div>
+            </div>
+    </div>
+</div>
+</div>
