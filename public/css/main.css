@@ -1112,3 +1112,20 @@ a.white-color:hover {
   padding-top:5px;
   padding-bottom: 5px;
 }
+.progressBar {
+  height: 6px;
+  border:1px solid #d4d4d4;
+  background:#f3f3f3;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.progressBar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background: #56a3f3;
+  border-radius: 3px;
+}

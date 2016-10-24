@@ -9,9 +9,9 @@ function issueListCtrl ($scope, reqFn) {
     	{title:'Закончен', field: 'is_completed', ngClass: 'text-center', filter: " | myfilter"},
     	{title:'В архиве', field: 'is_archived', ngClass: 'text-center', filter: " | myfilter"},
     	{title:'Прогресс', field: 'physical_progress', ngClass: 'text-center'},
-    	{title:'Создан', field: 'creation_date', filter: ' | date:"HH:mm dd.MM.yyyy"', ngClass: 'text-center'},
-    	{title:'Начало', field: 'start_date', filter: ' | date:"HH:mm dd.MM.yyyy"', ngClass: 'text-center'},
-    	{title:'Срок', field: 'due_date', filter: ' | date:"HH:mm dd.MM.yyyy"', ngClass: 'text-center'},
+    	{title:'Создан', field: 'creation_date', filter: ' | date:"dd.MM.yyyy HH:mm"', ngClass: 'text-center'},
+    	{title:'Начало', field: 'start_date', filter: ' | date:"dd.MM.yyyy HH:mm"', ngClass: 'text-center'},
+    	{title:'Срок', field: 'due_date', filter: ' | date:"dd.MM.yyyy HH:mm"', ngClass: 'text-center'},
     	{title:' ', field: '<a class="array-tags" ui-sref="edit({id: item.id})">Редактировать</a>', button: true}
     ];
 	var getListFn = function (a){
@@ -37,20 +37,20 @@ function editorCtrl($scope, $rootScope,reqFn, $stateParams){
 				url: 'json/list.json',
 				method: 'get'
 			},
-			list: 'list_scope'
+			list: 'editScope'
 		};	
 		reqFn.request(params.request).then(function(response){
 			for(i=0; i< response.data.length; i++){
 				if(response.data[i].id == $stateParams.id){
-					$scope.editScope =	response.data[i]	;
+					$scope[params.list] =	response.data[i];
 				}				
 			}
 		});
 	}
 	$scope.saveElem = function(a){
 		params = {
-			url:'api/put',
-			method: 'put',
+			url:'../json/',
+			method: 'post',
 			data: a
 		};
 		reqFn.request(params).then(function(response){
@@ -58,6 +58,7 @@ function editorCtrl($scope, $rootScope,reqFn, $stateParams){
 		});
 	}
 }
+
 angular
     .module('test')
     .controller('issueListCtrl', issueListCtrl)
