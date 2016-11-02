@@ -64,7 +64,31 @@ function tbodyCol($compile){
         }
     }
 }
+function mobileFocusAction ($document){
+    return {
+        restrict: 'A',
+        link: function (scope, elem){
+            elem.on('input', function  () {
+                if(angular.element(this).val() !== ''){
+                    angular.element(this).parent().find('label').addClass('has-dirty');
+                    if(angular.element(this).hasClass('ng-invalid-email')){
+                        angular.element(this).parent().find('label').addClass('error');
+                        $document.find('button').attr('disabled', true);
+                    }else{
+                        angular.element(this).parent().find('label').removeClass('error');
+                        $document.find('button').removeAttr('disabled');
+                    }
+                }else{
+                    angular.element(this).parent().find('label').removeClass('has-dirty'); 
+                    angular.element(this).parent().find('label').removeClass('error');
+                    $document.find('button').removeAttr('disabled');
+                }
+            });
+        }
+    }
+}
 angular
     .module('test')
     .directive('tableDyn', tableDyn)
-    .directive('tbodyCol', tbodyCol);
+    .directive('tbodyCol', tbodyCol)
+    .directive('mobileFocusAction',mobileFocusAction);

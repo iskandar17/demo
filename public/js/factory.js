@@ -12,7 +12,19 @@ function reqFn($http){
         }
     }
 }
+function authHeaderSet($rootScope, $q) {
+    return {
+        request: function(config) {
+            config.headers = config.headers || {};
+            config.headers.Auth = 'someHash';
+            return config;
+        },
+        responseError: function(rejection) {
+            return $q.reject(rejection);
+        }
+    }
+}
 angular
     .module('test')
     .factory('reqFn', reqFn)
-    ;
+    .factory('authHeaderSet',authHeaderSet);
